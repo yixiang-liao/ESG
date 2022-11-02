@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>產品碳排查分析平台</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+</style>
+</head>
+<script>
+	function print_value() {
+		document.getElementById("result").innerHTML = document.getElementById("number").value
+		html = "";
+        obj = {
+            "CUT100" : "裁減",
+            "SKIVE100": "削皮",
+            "MANUAL100" : "手工",
+            "STOCKING100": "襪里",
+            "STITCHING100" : "針車",
+            "INSOLE100" : "底倉",
+            "SHAPING100": "成型",
+            "ASSEMBLE100" : "組底"
+        }
+        obj_2 = {
+            "CUT200" : "裁減",
+            "SKIVE200": "削皮",
+            "MANUAL200" : "手工",
+            "STOCKING200": "襪里",
+            "STITCHING200" : "針車",
+            "INSOLE200" : "底倉",
+            "SHAPING200": "成型",
+            "ASSEMBLE200" : "組底"
+        }
+        obj_3 = {
+            "CUT300" : "裁減",
+            "SKIVE300": "削皮",
+            "MANUAL300" : "手工",
+            "STOCKING300": "襪里",
+            "STITCHING300" : "針車",
+            "INSOLE300" : "底倉",
+            "SHAPING300": "成型",
+            "ASSEMBLE300" : "組底"
+        }
+        obj_4 = {
+            "CUT400" : "裁減",
+            "SKIVE400": "削皮",
+            "MANUAL400" : "手工",
+            "STOCKING400": "襪里",
+            "STITCHING200" : "針車",
+            "INSOLE400" : "底倉",
+            "SHAPING400": "成型",
+            "ASSEMBLE400" : "組底"
+        }
+        obj_5 = {
+            "CUT500" : "裁減",
+            "SKIVE500": "削皮",
+            "MANUAL500" : "手工",
+            "STOCKING500": "襪里",
+            "STITCHING500" : "針車",
+            "INSOLE500" : "底倉",
+            "SHAPING500": "成型",
+            "ASSEMBLE500" : "組底"
+        }
+		if(document.getElementById("number").value == "AO-03410"){
+			for(var key in obj) {
+				html += "<option value=" + key  + ">" +obj[key] + "</option>"
+			}
+		}
+		else if(document.getElementById("number").value == "AO-03020"){
+			for(var key in obj_2) {
+				html += "<option value=" + key  + ">" +obj_2[key] + "</option>"
+			}
+		}
+		else if(document.getElementById("number").value == "AO-03430"){
+			for(var key in obj_3) {
+				html += "<option value=" + key  + ">" +obj_3[key] + "</option>"
+			}
+		}
+		else if(document.getElementById("number").value == "AO-03440"){
+			for(var key in obj_4) {
+				html += "<option value=" + key  + ">" +obj_4[key] + "</option>"
+			}
+		}
+		else if(document.getElementById("number").value == "AO-03450"){
+			for(var key in obj_5) {
+				html += "<option value=" + key  + ">" +obj_5[key] + "</option>"
+			}
+		}
+        document.getElementById("number_2").innerHTML = html;
+
+}
+</script>
+<body>
+	<header>產品碳排查分析平台</header>
+<div class="Page">
+	  <div class="Left">
+		  <div class="Product">
+			<select class="Title" id="number" name="number" onchange="print_value();">
+				<option>產品列表</option>
+				<option value="AO-03410">AO-03410</option>
+				<option value="AO-03020">AO-03020</option>
+				<option value="AO-03430">AO-03430</option>
+				<option value="AO-03440">AO-03440</option>
+				<option value="AO-03450">AO-03450</option>
+			</select>
+			<p></p>
+			<select class="Title" id="number_2" name="number_2">
+				<option id="result"></option>
+			</select>
+		   </div>
+		<div class="Title">優化碳排製成建議</div>
+			<div class="new_calculate">
+				<div class="ncA">
+					<div class="ncB">碳排量</div>
+					<div class="ncC">100</div>
+				</div>
+				<div class="ncA">
+					<div class="ncB">成　本</div>
+					<div class="ncC">100</div>
+				</div>
+				<div class="ncBo">輸出優化製成資訊</div>
+		  	</div>
+		</div>
+		<div class="Right">
+			<div class="newg">
+				<div class="center">
+					<div class="switch_demo">
+						<input type="checkbox" name="switch_demo" class="switch_demo-checkbox" id="switch_demo" checked>
+						<label class="switch_demo-label" for="switch_demo">
+							<span class="switch_demo-inner"></span>
+							<span class="switch_demo-switch"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="calculate">
+				<div class="calculate_T">碳排預估量</div>
+				<div class="calculate_O">50</div>
+				<div class="calculate_T">生產成本</div>
+				<div class="calculate_O">50</div>
+			</div>
+		</div>
+	</div>
+<a href="index.html"><div class="Home">回首頁</div></a>
+</body>
+</html>
