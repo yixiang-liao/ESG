@@ -19,7 +19,6 @@ a:active {
 }
 </style>
 </head>
-<script  type="text/javascript" src="1102.js"></script>
 <script>
 	function print_value() {
 		document.getElementById("result").innerHTML = document.getElementById("number").value
@@ -78,26 +77,31 @@ a:active {
 			for(var key in obj) {
 				html += "<option value=" + key  + ">" +obj[key] + "</option>"
 			}
+			document.getElementById("list_ncC").innerHTML = "11 kg";
 		}
 		else if(document.getElementById("number").value == "AO-03020"){
 			for(var key in obj_2) {
 				html += "<option value=" + key  + ">" +obj_2[key] + "</option>"
 			}
+			document.getElementById("list_ncC").innerHTML = "10.8 kg";
 		}
 		else if(document.getElementById("number").value == "AO-03430"){
 			for(var key in obj_3) {
 				html += "<option value=" + key  + ">" +obj_3[key] + "</option>"
 			}
+			document.getElementById("list_ncC").innerHTML = "10.4 kg";
 		}
 		else if(document.getElementById("number").value == "AO-03440"){
 			for(var key in obj_4) {
 				html += "<option value=" + key  + ">" +obj_4[key] + "</option>"
 			}
+			document.getElementById("list_ncC").innerHTML = "10.5 kg";
 		}
 		else if(document.getElementById("number").value == "AO-03450"){
 			for(var key in obj_5) {
 				html += "<option value=" + key  + ">" +obj_5[key] + "</option>"
 			}
+			document.getElementById("list_ncC").innerHTML = "10.6 kg";
 		}
         document.getElementById("number_2").innerHTML = html;
 
@@ -125,7 +129,7 @@ a:active {
 			<div class="new_calculate">
 				<div class="ncA">
 					<div class="ncB">碳排量</div>
-					<div class="ncC list_ncC"></div>
+					<div class="ncC list_ncC" id="list_ncC"></div>
 				</div>
 				<div class="ncA">
 					<div class="ncB">成　本</div>
